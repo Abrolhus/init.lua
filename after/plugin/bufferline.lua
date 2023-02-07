@@ -8,7 +8,9 @@ require('bufferline').setup {
         middle_mouse_command = nil,          -- can be a string | function, see "Mouse actions"
         indicator = {
             icon = '▎', -- this should be omitted if indicator style is not 'icon'
-            style = 'icon' -- | 'underline' | 'none',
+            -- icon = '', -- this should be omitted if indicator style is not 'icon'
+            -- icon = '', -- this should be omitted if indicator style is not 'icon'
+            style = 'none' -- | 'underline' | 'none', 'icon'
         },
         buffer_close_icon = '',
         modified_icon = '●',
@@ -34,9 +36,13 @@ require('bufferline').setup {
         diagnostics = "nvim_lsp", -- | "coc" | false
         diagnostics_update_in_insert = false,
         -- The diagnostics indicator can be set to nil to keep the buffer name highlight but delete the highlighting
-        diagnostics_indicator = function(count, level, diagnostics_dict, context)
-            return "["..count.."]"
+        diagnostics_indicator = function(count, level)
+            local icon = level:match("error") and " " or " "
+            return " " .. icon .. count
         end,
+        -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
+        --     return "["..count.."]"
+        -- end,
         -- NOTE: this will be called a lot so don't do any heavy processing here
         custom_filter = function(buf_number, buf_numbers)
             -- filter out filetypes you don't want to see
@@ -64,7 +70,7 @@ require('bufferline').setup {
                 -- text = "File Explorer", --  | function ,
                 -- text_align = "left" | "center" | "right"
                 text_align = "center",
-                separator = true
+                separator = false
             }
         },
         color_icons = true, --  | false, -- whether or not to add the filetype icon highlights
@@ -78,7 +84,8 @@ require('bufferline').setup {
         -- can also be a table containing 2 custom separators
         -- [focused and unfocused]. eg: { '|', '|' }
         -- separator_style = "slant", -- | "thick" | "thin" | { 'any', 'any' },
-        separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
+        -- separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
+        separator_style = {"", ""}, -- | "thick" | "thin" | { 'any', 'any' },
         enforce_regular_tabs = true, -- | true,
         -- enforce_regular_tabs = false, -- | true,
         always_show_bufferline = true, -- | false,
