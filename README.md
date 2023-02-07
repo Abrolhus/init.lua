@@ -1,5 +1,5 @@
 # init.lua
-My neovim config (including Neovide)
+### My neovim config (including Neovide)
 ![neovim config screenshot](screenshot.png "My config")
 ## Checklist
 ### Edit
