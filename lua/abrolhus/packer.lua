@@ -77,6 +77,9 @@ return require('packer').startup(function(use)
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
     }
+    use {
+        "ray-x/lsp_signature.nvim",
+    }
     -- use {
     --
     -- 'antosha417/nvim-lsp-file-operations',

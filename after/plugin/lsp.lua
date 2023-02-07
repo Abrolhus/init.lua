@@ -5,6 +5,8 @@ lsp.preset('recommended')
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
+require "lsp_signature".setup()
+
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local format = lspkind.cmp_format({
     mode = 'symbol_text', -- show only symbol annotations
@@ -40,6 +42,12 @@ lsp.on_attach(function(client, bufnr)
     if client.server_capabilities.documentSymbolProvider then
         navic.attach(client, bufnr)
     end
+    require "lsp_signature".on_attach({
+        bind = true, -- This is mandatory, otherwise border config won't get registered.
+        handler_opts = {
+            border = "rounded"
+        }
+    }, bufnr)
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
