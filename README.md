@@ -1,15 +1,15 @@
 # init.lua
 My neovim config (including Neovide)
 ## Checklist
-- [ ] LSP
-- [ ] Completion
-- [ ] Treesitter
+- [X] LSP
+- [X] Completion
+- [X] Treesitter
 - [ ] REPL
 - [ ] Emacs like Scratch buffer
-- [ ] Signature Help
+- [X] Signature Help
 - [ ] Auto pairs 
-- [ ] Tabs
-- [ ] Status bar
-- [ ] Neovide
+- [X] Tabs
+- [X] Status bar
+- [X] Neovide
 - [ ] Toggle Terminal
 - [ ] Project Management
