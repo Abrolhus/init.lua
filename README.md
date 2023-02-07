@@ -1,15 +1,32 @@
 # init.lua
 My neovim config (including Neovide)
 ## Checklist
+### Edit
+- [X] Comment using keymap
+- [ ] REPL
+- [ ] Emacs like Scratch buffer
+- [ ] Auto pairs 
+- [ ] Toggle Terminal
+### Language Support
 - [X] LSP
 - [X] Completion
 - [X] Treesitter
-- [ ] REPL
-- [ ] Emacs like Scratch buffer
 - [X] Signature Help
-- [ ] Auto pairs 
+### Eye Candy
 - [X] Tabs
 - [X] Status bar
-- [X] Neovide
-- [ ] Toggle Terminal
+### File Navigation
+- [X] File Tree
+- [X] Fuzzy Finder (Telescope)
 - [ ] Project Management
+### Neovide
+- [X] Neovide
+
+
+
+
+
+
+
+
+
