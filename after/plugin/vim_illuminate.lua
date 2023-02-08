@@ -7,7 +7,7 @@ require('illuminate').configure({
         'regex',
     },
     -- delay: delay in milliseconds
-    delay = 100,
+    delay = 200,
     -- filetype_overrides: filetype specific overrides.
     -- The keys are strings to represent the filetype while the values are tables that
     -- supports the same keys passed to .configure except for filetypes_denylist and filetypes_allowlist
@@ -26,9 +26,9 @@ require('illuminate').configure({
     -- If nil, vim-illuminate will be disabled for large files.
     large_file_overrides = nil,
     -- min_count_to_highlight: minimum number of matches required to perform highlighting
-    min_count_to_highlight = 1,
+    min_count_to_highlight = 2,
 })
 -- vim.cmd "highlight! link IlluminateWord BufferCurrent" --here
-vim.cmd "highlight! link IlluminatedWordText BufferCurrent" --here -- `Visual` is probably best
-vim.cmd "highlight! link IlluminatedWordWrite BufferCurrent" --here
-vim.cmd "highlight! link IlluminatedWordRead BufferCurrent" --here
+vim.cmd "highlight! link IlluminatedWordText Visual" --here -- `Visual` is probably best
+vim.cmd "highlight! link IlluminatedWordWrite Visual" --here
+vim.cmd "highlight! link IlluminatedWordRead Visual" --here
