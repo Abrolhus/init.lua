@@ -1,5 +1,15 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
+-- Install packer
+local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+-- local is_bootstrap = false
+local is_bootstrap = false
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    is_bootstrap = true
+    vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
+    -- vim.cmd [[packadd packer.nvim]]
+    vim.cmd.packadd('packer.nvim')
+    -- require('packer').sync()
+end
 -- Only required if you have packer configured as `opt`
 vim.cmd.packadd('packer.nvim')
 
@@ -80,6 +90,8 @@ return require('packer').startup(function(use)
     use {
         "ray-x/lsp_signature.nvim",
     }
+    --- project management
+    use  "ahmedkhalf/project.nvim"
     -- use {
     --
     -- 'antosha417/nvim-lsp-file-operations',
@@ -92,4 +104,7 @@ return require('packer').startup(function(use)
     -- use("folke/zen-mode.nvim")
     -- use("github/copilot.vim")
     -- use("eandrju/cellular-automaton.nvim")
+    if is_bootstrap then
+        require('packer').sync()
+    end
 end)
