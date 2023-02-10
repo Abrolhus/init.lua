@@ -1,13 +1,13 @@
 vim.api.nvim_create_augroup('highlight_yank', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', { 
+vim.api.nvim_create_autocmd('TextYankPost', {
     group = 'highlight_yank', pattern = '*',
     callback = function()
-        vim.highlight.on_yank({on_visual=true, timeout=100})
+        vim.highlight.on_yank({ on_visual = true, timeout = 100 })
     end
 })
 -- highlight-symbol-on-cursor-hold
 vim.api.nvim_create_augroup('cursor_hold_word', { clear = true })
-vim.api.nvim_create_autocmd( 'CursorHold',
+vim.api.nvim_create_autocmd('cursorhold',
     {
         group = 'cursor_hold_word',
         pattern = '*',
