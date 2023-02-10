@@ -8,6 +8,7 @@
 - [ ] Emacs like Scratch buffer
 - [ ] Auto pairs 
 - [ ] Toggle Terminal
+- [X] change and add *surrounds*
 ### Language Support
 - [X] LSP
 - [X] Completion

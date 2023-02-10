@@ -28,8 +28,8 @@ return {
         "nvim-treesitter/playground",
         lazy = true,
     },
-    -- use("mbbill/undotree")
-    -- use("tpope/vim-fugitive")
+    -- { "mbbill/undotree" }
+    -- ("tpope/vim-fugitive")
     {
         "VonHeikemen/lsp-zero.nvim",
         branch = "v1.x",
