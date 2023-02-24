@@ -1,4 +1,4 @@
 require("abrolhus.set")
 require("abrolhus.map")
-require("abrolhus.hightlights")
+require("abrolhus.auto_cmds")
 require("abrolhus.neovide")

@@ -19,3 +19,10 @@ vim.api.nvim_create_autocmd('cursorhold',
         end
     }
 )
+-- delete trailing whitespaces on save
+local Whitespace_group = vim.api.nvim_create_augroup("Whitespace", {})
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    group = Whitespace_group,
+    pattern = "*",
+    command = "%s/\\s\\+$//e",
+})
