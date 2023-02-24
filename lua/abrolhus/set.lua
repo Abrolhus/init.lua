@@ -1,6 +1,6 @@
 local opt = vim.opt
 --- mouse ---
--- opt.guicursor = "" 
+-- opt.guicursor = ""
 -- having diferent cursos for normal and insert mode show be good
 opt.mouse = "a"
 
@@ -41,3 +41,5 @@ opt.completeopt= { "menu", "menuone", "noselect"}
 
 --- leader key ---
 vim.g.mapleader = " "
+--- netrw ---
+vim.g.netrw_banner = 0
