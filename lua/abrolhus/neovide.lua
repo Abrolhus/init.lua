@@ -2,7 +2,9 @@
 
 if vim.g.neovide then
     -- Put anything you want to happen only in Neovide here
-    vim.opt.guifont = { "CodeNewRoman Nerd Font Mono", "h14" } -- text below applies for VimScript
+    -- vim.opt.guifont = { "RobotoMono Nerd Font Mono", "h14" } -- text below applies for VimScript
+    vim.opt.guifont = { "Mononoki Nerd Font Mono", "h14" } -- text below applies for VimScript
+    -- vim.opt.guifont = { "CodeNewRoman Nerd Font Mono", "h14" } -- text below applies for VimScript
     vim.g.neovide_scale_factor = 1.0
     vim.g.neovide_floating_blur_amount_x = 2.0
     vim.g.neovide_floating_blur_amount_y = 2.0
