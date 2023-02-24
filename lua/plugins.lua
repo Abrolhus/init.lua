@@ -89,4 +89,5 @@ return {
     { "ray-x/lsp_signature.nvim", },
     --- project management
     { "ahmedkhalf/project.nvim" },
+    { "folke/which-key.nvim", },
 }
