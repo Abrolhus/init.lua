@@ -13,3 +13,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 local plugins = require("plugins")
 require("lazy").setup(plugins)
+-- keymap
+vim.keymap.set("n", "<leader>ol", vim.cmd.Lazy, { desc = "Open Lazy plugin manager" })
