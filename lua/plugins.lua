@@ -68,6 +68,15 @@ return {
         -- dependencies = { "kyazdani42/nvim-web-devicons", lazy = true }
         dependencies = { "nvim-tree/nvim-web-devicons" }
     },
+    --- centralized command line:
+    --[[ {
+        "folke/noice.nvim" ,
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        }
+
+    }, ]]
     --- winbar:
     {
         "utilyre/barbecue.nvim",
